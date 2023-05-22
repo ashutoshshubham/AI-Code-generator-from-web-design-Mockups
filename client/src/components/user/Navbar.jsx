@@ -6,24 +6,8 @@ const Navbar = () => {
 
     const { loggedIn, setLoggedIn, logout } = useUserContext();
 
-    const LogInLogOut = () => {
-        if (!loggedIn) {
-            return (
-                <>
-                    <li className="nav-item">
-                        <NavLink className="nav-link text-white" to="/main/signup">
-                            SignUp
-                        </NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink className="nav-link text-white" to="/main/login">
-                            Login
-                        </NavLink>
-                    </li>
-                </>
-            )
-        }
-        else {
+    const showLogOut = () => {
+        if (loggedIn) {
             return (
                 <>
                     <button className="btn btn-danger" onClick={logout}>LogOut</button>
@@ -69,9 +53,14 @@ const Navbar = () => {
                         {/* </a> */}
                         {/* Left links */}
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <NavLink className="nav-link text-white" to="/main/home">
                                     Home
+                                </NavLink>
+                            </li> */}
+                            <li className="nav-item">
+                                <NavLink className="nav-link text-white" to="/user/userProfile">
+                                    Profile
                                 </NavLink>
                             </li>
                             {/* <li className="nav-item">
@@ -84,9 +73,9 @@ const Navbar = () => {
                                     Login
                                 </NavLink>
                             </li> */}
-                            {LogInLogOut()}
+                            {showLogOut()}
                         </ul>
-                    
+
                     </div>
 
 

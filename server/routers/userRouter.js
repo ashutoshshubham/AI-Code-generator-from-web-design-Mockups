@@ -25,7 +25,7 @@ router.get('/getall', (req, res) => {
     });
 })
 
-router.get('/auth', (req, res) => {
+router.post('/auth', (req, res) => {
     console.log(req.body)
     Model.findOne(req.body)
     .then((result) => {

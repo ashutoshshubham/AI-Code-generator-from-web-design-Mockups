@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const dBName = 'AI_Code_generator_with_web_design_Mockups';
+const dBName = 'AI_Code_generator';
 
 const url = `mongodb+srv://ashutoshshubham:ashutosh@cluster0.cqjsjz0.mongodb.net/${dBName}?retryWrites=true&w=majority`
 
